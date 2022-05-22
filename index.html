@@ -16,14 +16,14 @@
           alt="picture of the good old days"
         />
         <nav>
-          <ul>
+          <ul id="menuList">
             <li><a href="">Game Controllers</a></li>
             <li><a href="">Vr Accessories</a></li>
             <li><a href="">Media Remotes</a></li>
             <li><a href="">Others</a></li>
           </ul>
         </nav>
-        <img src="image/menu.png" class="menu-icon" ">
+        <img src="image/menu.png" class="menu-icon" onclick="togglemenu()" ">
       </div>
       <div class="row">
         <div class="col-1">
@@ -37,13 +37,35 @@
           <img src="image/controller.png" class="controller" />
           <div class="color-box"></div>
           <div class="add-btn">
-            <img src="image/add.png" alt="">
+            <img src="image/add.png" alt="add icon" />
             <p>
               <small>Add to Cart</small>
             </p>
           </div>
         </div>
       </div>
+      <div class="social-links">
+        <img src="image/fb.png" alt="facebook icon">
+        <img src="image/tw.png" alt="twitter icon">
+        <img src="image/ig.png" alt="instagram icon">
+      </div>
     </div>
+    <script>
+      var menuList = document.getElementById("menuList");
+
+      menuList.style.maxHeight = "0px";
+
+      function togglemenu (){
+        if(menuList.style.maxHeight == "0px")
+        {
+          menuList.style.maxHeight = "130px";
+        }
+        else
+        {
+          menuList.style.maxHeight = "0px";
+        }
+      }
+
+    </script>
   </body>
 </html>
